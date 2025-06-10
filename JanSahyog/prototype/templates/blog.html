@@ -1,0 +1,239 @@
+{% extends "base.html" %}
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+
+    {% block title %}Blog - JanSahyog{% endblock %}
+    
+{% block content %}
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+ <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+
+           <!-- ***** Logo Start ***** --> 
+<a href="{{ url_for('home') }}" class="logo d-flex align-items-center flex-nowrap" style="gap: 0.5em;">
+  <!-- National Emblem -->
+  <img src="{{ url_for('static', filename='assets/images/emblem.png') }}"
+       alt="National Emblem"
+       class="logo-img"
+       style="height: 1.8em; width: 2em; display: inline-block; vertical-align: middle;">
+  <!-- Your Text Logo -->
+  <h4 class="mb-0 ms-2" style="white-space:nowrap; display: inline-block; vertical-align: middle;">JAN<span style="color: #ff3b3b;">SAHYOG</span></h4>
+  <!-- Digital India Logo -->
+  <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/Digital_India_logo.svg/1200px-Digital_India_logo.svg.png"
+       alt="Digital India"
+       class="digital-india-logo ms-2"
+       style="height: 1.8em; width:4em; display: inline-block; vertical-align: middle;">
+</a>
+<!-- ***** Logo End *****-->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li class="scroll-to-section"><a href="{{ url_for('home') }}#top" class="active">Home</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('home') }}#about">About Us</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('home') }}#services">Schemes</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('portfolio') }}">Portfolio</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('blog') }}">Blog</a></li>
+              <li class="scroll-to-section"><a href="{{ url_for('home') }}#contact">Message Us</a></li> 
+              <li class="scroll-to-section d-lg-none d-block">
+  <!-- For mobile view -->
+<li class="scroll-to-section d-lg-none d-block">
+  <a href="#" class="signupBtn btn btn-danger w-100 text-center" data-bs-toggle="modal" data-bs-target="#signupModal">Log In</a>
+</li>
+<!-- For desktop view -->
+<li class="scroll-to-section d-none d-lg-block">
+  <div class="signupBtn main-red-button">
+    <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Log In</a>
+  </div>
+</li>
+              
+
+            </ul>        
+            <a class='menu-trigger'>
+                <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+<div id="blog" class="our-blog section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.15s">
+        <div class="section-heading text-center">
+          <h2>JanSahyog <em>Blog</em> & <span>Stories</span></h2>
+          <p>
+            Welcome to the JanSahyog Blog! Here we share inspiring stories, digital empowerment tips, and the latest updates on government schemes and citizen success. Discover how technology is transforming lives across India.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- Featured Blog Post -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="left-image">
+          <a href="#"><img src="https://c4scourses.in/wp-content/uploads/2025/01/image-128-937x1024.png" alt="Success Story"></a>
+          <div class="info">
+            <div class="inner-content">
+              <ul>
+                <li><i class="fa fa-calendar"></i> 14 May 2025</li>
+                <li><i class="fa fa-users"></i> Team JanSahyog</li>
+                <li><i class="fa fa-folder"></i> Success Story</li>
+              </ul>
+              <a href="#"><h4>How a Farmer Benefited from PM-KISAN via JanSahyog</h4></a>
+              <p>Read how our platform helped a small farmer discover and apply for the PM-KISAN scheme, ensuring timely support for his family and crops.</p>
+              <div class="main-blue-button">
+                <a href="#">Discover More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Blog List -->
+      <div class="col-lg-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.25s">
+        <div class="right-list">
+          <ul>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 02 May 2025</span>
+                <a href="#"><h4>Women Empowerment: Real Stories, Real Impact</h4></a>
+                <p>Discover how women across India are using JanSahyog to access welfare schemes, start businesses, and become financially independent.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMni6FpOViAp2cAnaBCOU1sMikiTUBA7fekA&s" alt="Women Empowerment"></a>
+              </div>
+            </li>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 20 May 2025</span>
+                <a href="#"><h4>Digital India: A Citizen’s Guide</h4></a>
+                <p>Learn how Digital India initiatives and JanSahyog make government services accessible to everyone, everywhere.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgwpmq1_vcg4XykkM6mDJAJAK-kiBhrE54mw&s" alt="Digital India"></a>
+              </div>
+            </li>
+            <li>
+              <div class="left-content align-self-center">
+                <span><i class="fa fa-calendar"></i> 21 May 2025</span>
+                <a href="#"><h4>Student Success: Scholarships Made Simple</h4></a>
+                <p>See how students are finding and applying for scholarships with ease using our AI-powered chatbot and guidance tools.</p>
+              </div>
+              <div class="right-image">
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3Fwxpl_7KGqmmQZXMxRRGg2cW9_O2jW06rw&s" alt="Student Success"></a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<footer style="background: #fff;display: none">
+      <div class="row">
+        <div class="col-lg-12 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.25s">
+          <p>© Copyright 2021 JanSahyog All Rights Reserved. 
+          
+          <br>Follow Us on <a rel="nofollxow" href="#">Instagram</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+ <!-- Sign Up / Sign In Modal Styled Like DigiLocker -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content border-0 shadow">
+      <div class="modal-body p-4">
+        <h5 class="text-center mb-3">Sign In to your account via <strong style="color: #0d6efd;">JANSahyog</strong></h5>
+        
+        <ul class="nav nav-tabs mb-3 justify-content-center" id="signinTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="mobile-tab" data-bs-toggle="tab" data-bs-target="#mobile" type="button" role="tab">Mobile</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="username-tab" data-bs-toggle="tab" data-bs-target="#username" type="button" role="tab">Username</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="others-tab" data-bs-toggle="tab" data-bs-target="#others" type="button" role="tab">Others</button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="signinTabContent">
+          <!-- Mobile Tab -->
+          <div class="tab-pane fade show active" id="mobile" role="tabpanel">
+            <form id="mobileSigninForm">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Mobile*" required>
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control" placeholder="PIN*" required>
+              </div>
+              <div class="text-end mb-2">
+                <a href="#" class="text-decoration-none small">Forgot security PIN?</a>
+              </div>
+              <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" id="pinless">
+                <label class="form-check-label" for="pinless">PIN less authentication</label>
+              </div>
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="consent" required>
+                <label class="form-check-label" for="consent">I consent to <a href="#">terms of use</a>.</label>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Sign In</button>
+            </form>
+          </div>
+
+          <!-- Username Tab -->
+          <div class="tab-pane fade" id="username" role="tabpanel">
+            <form id="usernameSigninForm">
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Username*" required>
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password*" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Sign In</button>
+            </form>
+          </div>
+
+          <!-- Others Tab -->
+          <div class="tab-pane fade" id="others" role="tabpanel">
+            <p class="text-muted text-center">Other sign-in options will be added here.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-3">
+          <span class="small">New user? <a href="#" class="text-primary">Sign up</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{% endblock %}

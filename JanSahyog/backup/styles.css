@@ -1,0 +1,17 @@
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f2f2f2;
+}
+form input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 300px;
+}
+#voice-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

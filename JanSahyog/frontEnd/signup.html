@@ -1,0 +1,94 @@
+<div class="signup-container">
+    <button type="button" class="btn-close" aria-label="Close"
+    style="position:absolute; top:16px; right:16px; z-index:10;"
+    onclick="if(window.parent && window.parent.bootstrap) { 
+      var modalEl = window.parent.document.getElementById('signupModal'); 
+      if(modalEl) window.parent.bootstrap.Modal.getInstance(modalEl)?.hide(); 
+    } else { window.close(); }">
+  </button>
+    <div class="logo">
+      <img src="assets\images\JANSAHYOG1.png" alt="Logo" />
+    </div>
+    <h2>Create Your Account</h2>
+
+    <form id="signupForm">
+      <div class="form-group">
+        <label>First Name <span class="error">*</span></label>
+        <input type="text" name="firstName" required />
+      </div>
+
+      <div class="form-group">
+        <label>Middle Name</label>
+        <input type="text" name="middleName" />
+      </div>
+
+      <div class="form-group">
+        <label>Last Name <span class="error">*</span></label>
+        <input type="text" name="lastName" required />
+      </div>
+
+      <div class="form-group">
+        <label>Date of Birth <span class="error">*</span></label>
+        <input type="date" name="dob" required />
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender-group">
+          <label><input type="radio" name="gender" value="Male" required /> Male</label>
+          <label><input type="radio" name="gender" value="Female" required/> Female</label>
+          <label><input type="radio" name="gender" value="Other" required/> Other</label>
+        </div>
+      </div>
+
+      <div class="dual-input">
+        <div class="form-group" style="flex: 1;">
+          <label>Mobile Number</label>
+          <input type="tel" name="mobile" />
+        </div>
+        <div class="form-group" style="flex: 1;">
+          <label>Email</label>
+          <input type="email" name="email" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Password <span class="error">*</span></label>
+        <input type="password" name="password" required />
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password <span class="error">*</span></label>
+        <input type="password" name="confirmPassword" required />
+      </div>
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="login-link">
+      Already have an account? <a href="#" id="show-login">Log In</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      const form = e.target;
+      const password = form.password.value;
+      const confirmPassword = form.confirmPassword.value;
+      const mobile = form.mobile.value.trim();
+      const email = form.email.value.trim();
+
+      // Check for at least one contact field
+      if (!mobile && !email) {
+        alert("Please enter at least a Mobile Number or Email.");
+        e.preventDefault();
+        return;
+      }
+
+      // Check password match
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        e.preventDefault();
+      }
+    });
+  </script>

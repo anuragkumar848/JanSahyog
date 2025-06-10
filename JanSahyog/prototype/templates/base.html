@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}JanSahyog{% endblock %}</title>
+    <!-- CSS files -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/myAddOns.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/newAddOns.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/fontawesome.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/templatemo-space-dynamic.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/animated.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/owl.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/robot.css') }}">
+    <!-- Bootstrap core CSS from vendor -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}">
+    <!-- Add more CSS files as needed -->
+</head>
+<body>
+    {% block content %}{% endblock %}
+    <!-- JS files -->
+    <!-- jQuery from vendor -->
+    <script src="{{ url_for('static', filename='assets/vendor/jquery/jquery.min.js') }}"></script>
+    <!-- Bootstrap JS from vendor -->
+    <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/owl-carousel.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/animation.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/imagesloaded.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/templatemo-custom.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/sign_up.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/chatbot.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/robot.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/digIndia.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/isotope.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/tabs.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/voiceAssistant.js') }}"></script>
+    <!-- Add more JS files as needed -->
+     {% block scripts %}{% endblock %}
+</body>
+</html>

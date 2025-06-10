@@ -1,0 +1,60 @@
++-------------------+         +-----------------------+         +---------------------+
+|      users        |         |   chatbot_sessions    |         |  chatbot_messages   |
++-------------------+         +-----------------------+         +---------------------+
+| id (PK)           |<------->| id (PK)               |<------->| id (PK)             |
+| first_name        |    |    | user_id (FK)          |    |    | session_id (FK)     |
+| middle_name       |    |    | started_at            |    |    | user_id (FK)        |
+| last_name         |    |    | ended_at              |    |    | sender              |
+| dob               |    |    +-----------------------+    |    | message             |
+| gender            |    |                                 |    | created_at          |
+| mobile            |    |                                 |    +---------------------+
+| email             |    |                                 |
+| password_hash     |    |                                 |
+| created_at        |    |                                 |
+| updated_at        |    |                                 |
++-------------------+    |                                 |
+                         |                                 |
++------------------------+                                 |
+|  aadhaar_verifications |                                 |
++------------------------+                                 |
+| id (PK)                |                                 |
+| user_id (FK)           |---------------------------------+
+| aadhaar_number         |
+| verified               |
+| verified_at            |
++------------------------+
+
++---------------------+         +---------------------+         +---------------------+
+|   digilocker_docs   |         |   scheme_searches   |         |   (other tables...) |
++---------------------+         +---------------------+         +---------------------+
+| id (PK)             |         | id (PK)             |
+| user_id (FK)        |         | user_id (FK)        |
+| doc_name            |         | occupation          |
+| attached_at         |         | state               |
++---------------------+         | searched_at         |
+                                +---------------------+
+
+
+                                //Users Schema
+
++-------------------+         +-------------------+
+|      users        |<--------|     sessions      |
++-------------------+         +-------------------+
+| id (PK)           |    ^    | id (PK)           |
+| first_name        |    |    | user_id (FK)      |
+| middle_name       |    |    | session_token     |
+| last_name         |    |    | created_at        |
+| dob               |    |    | expires_at        |
+| gender            |    |    +-------------------+
+| mobile            |    |
+| email             |    |    +-----------------------+
+| password_hash     |    +----|   password_resets     |
+| created_at        |         +-----------------------+
+| updated_at        |         | id (PK)               |
++-------------------+         | user_id (FK)          |
+                              | reset_token           |
+                              | created_at            |
+                              | expires_at            |
+                              +-----------------------+
+
+                              
